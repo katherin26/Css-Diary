@@ -40,3 +40,9 @@ The available features and functions - and the way they work - should fit the si
 - Can people use their **thumbs** to do the majority of the work?
 - Steven Hoober's research on mobile device usage found that the vast majority of people use one or both thumbs to interact on their phones.
 - Place main menu items, frequently-used controls and common actions within easy thumb reach.
+
+## **4. Design for fat fingers**
+
+- Controls and their associated tap targets should be a minumun of 9 mm (48px) in diameter.
+- Anything smaller than that takes it hard to tap easily and accurately.
+- **Provide ample space between targets** so user don't accidentally tap the wrong target.
