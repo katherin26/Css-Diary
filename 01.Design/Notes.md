@@ -34,3 +34,9 @@ The available features and functions - and the way they work - should fit the si
 - That means every screen should provide something useful, meaningful and valuable.
 - This makes the product easier to learn, easier to use and easier for you to add to later.
 - Abandon the idea that the numbers of screens (or steps) matters. It doesn't.
+
+## **3. Design for thumbs**
+
+- Can people use their **thumbs** to do the majority of the work?
+- Steven Hoober's research on mobile device usage found that the vast majority of people use one or both thumbs to interact on their phones.
+- Place main menu items, frequently-used controls and common actions within easy thumb reach.
