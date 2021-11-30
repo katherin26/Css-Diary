@@ -14,3 +14,23 @@
 
 - Designers believe that icons or pictures provide a greater degree of recognition while saving screen space.
 - In fact, they often go unused - because they're vague.
+
+# **FIVE RULES FOR EFFECTIVE UI DESIGN ON SMALL SCREENS**
+
+## **1. FOCUS ON CONTEXT OF USE**
+
+- When are people using the app/site?
+- When they're stressed?
+- When they're bored?
+- When they're busy?
+- When they're lost?
+
+The available features and functions - and the way they work - should fit the situation.
+
+## **2. Simplify**
+
+- Each screen should contain **One primary action.**
+- No more
+- That means every screen should provide something useful, meaningful and valuable.
+- This makes the product easier to learn, easier to use and easier for you to add to later.
+- Abandon the idea that the numbers of screens (or steps) matters. It doesn't.
