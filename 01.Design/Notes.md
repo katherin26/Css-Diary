@@ -46,3 +46,18 @@ The available features and functions - and the way they work - should fit the si
 - Controls and their associated tap targets should be a minumun of 9 mm (48px) in diameter.
 - Anything smaller than that takes it hard to tap easily and accurately.
 - **Provide ample space between targets** so user don't accidentally tap the wrong target.
+
+## **5. Minimize the need to type.**
+
+- Even in the best of circumstances, typing on a phone is a pain.
+- It's a **slow** process, almost always filled with **errors** so the less it's needed, the better.
+- Keep forms short and simple, be ruthless about removing unnecessary fields.
+- Use auto-complete and personalized data where possible.
+- Make the tech do more so the user can do less.
+
+## **6. Balance**
+
+- Balancing any layout means arranging positive elements and negative space so that no one area of the design overpowers the others (unless it's supposed to).
+- Everything works and fits together.
+- When a design is unbalanced, the individual elements compete with the whole.
+- They call too much attention to themselves; focus is on the trees instead of the forest.
