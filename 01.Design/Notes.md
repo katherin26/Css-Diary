@@ -61,3 +61,8 @@ The available features and functions - and the way they work - should fit the si
 - Everything works and fits together.
 - When a design is unbalanced, the individual elements compete with the whole.
 - They call too much attention to themselves; focus is on the trees instead of the forest.
+
+## **6.1 Improving balance**
+
+- In a content-heavy layout, balancing negative and positive space is mission - critical.
+- This allows the user to quickly scan, identify and group related visual elements.
