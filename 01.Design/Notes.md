@@ -124,3 +124,11 @@ Everything you see contains the four color variations required for good UI desig
 - Text is easily readable when stark, complementary colors are used.
 - A design where text is the brightest element can reduce eye strain by focusing attention.
 - Lack of contrast between text and background strains the eyes because they don't know which color to focus on.
+- The fact that colors are complementary doesn't mean constrast is appropiate. If both colors are too bright, eye
+  strain is again the result.
+
+## ** Constrast Directs Focus**
+
+- Design with contrast **purposefully** keeps the user's focus where it needs to be.
+- The **core content or action** should have the most contrast.
+- Secondary content and actions (and everything else) should have **lower constrast**, by degrees.
