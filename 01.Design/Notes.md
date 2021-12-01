@@ -66,3 +66,22 @@ The available features and functions - and the way they work - should fit the si
 
 - In a content-heavy layout, balancing negative and positive space is mission - critical.
 - This allows the user to quickly scan, identify and group related visual elements.
+
+## **7. Rhythm**
+
+- Rhythm occurs when the intervals between elements are predictable - and similiar in size, shape and length.
+- When elements repeat at regular intervals, the visual rhythm speeds identification and the user's ability to quickly:
+
+1. Infer what the elements are.
+2. Understand what they do.
+
+## **8. More constrast = more dominance**
+
+- More negative space = more dominance.
+
+## **9. Color Matters**
+
+- Color gets attention.
+- Color stirs emotional response and suggest associated meaning.
+- To prevent confusion in meaning, color has to be used consistenly.
+- To get the desired emotional response, color has to be used **appropriately.**
