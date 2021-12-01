@@ -147,3 +147,9 @@ Appropriate typography choises create :
 - Visual balance.
 
 All of which work together to form effective, understandable visual **communication**.
+
+## **Use Style to visually differentiate content.**
+
+- When choosing a typeface, you want one that has at least 3 styles: **regular,italic + bold**.
+- Use those styles in your design to differentiate between types of content.
+- Sometimes this removes the need for more than one font entirely - every level of information can be signified with styling.
