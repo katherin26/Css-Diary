@@ -89,3 +89,12 @@ The available features and functions - and the way they work - should fit the si
 - Color can maximize readability and minimize optical fatigue.
 - Color delivers symbolic meanings that support and enhance the visual experience of a design.
 - Color pleases the eye and sustains visual interest.
+
+## **10. How colors Influences Interaction**
+
+- Interaction CUE (same color)
+- State change (is in different color because is another interaction.)
+- Color should never be the sole differentiator of things in the UI.
+- It should highlight and guide.
+- For extended screen use situations, use light, muted background colors.
+- Bright, saturated colors should only be used as visual accents.
