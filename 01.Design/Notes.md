@@ -85,3 +85,7 @@ The available features and functions - and the way they work - should fit the si
 - Color stirs emotional response and suggest associated meaning.
 - To prevent confusion in meaning, color has to be used consistenly.
 - To get the desired emotional response, color has to be used **appropriately.**
+- The right colors draw the eye to the most important areas on the screen.
+- Color can maximize readability and minimize optical fatigue.
+- Color delivers symbolic meanings that support and enhance the visual experience of a design.
+- Color pleases the eye and sustains visual interest.
