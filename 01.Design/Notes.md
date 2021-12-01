@@ -136,3 +136,14 @@ Everything you see contains the four color variations required for good UI desig
 1. Contrast draws the user's attention to the essential components of the interface.
 2. Contrast helps the user understand relationships between onscreen elements.
 3. Contrast communicates hierarchy and signifies importance within and across multiple sets of visual information.
+
+## ** Typography serves functional purpose**
+
+Appropriate typography choises create :
+
+- Readability.
+- Accessubility.
+- Usability.
+- Visual balance.
+
+All of which work together to form effective, understandable visual **communication**.
