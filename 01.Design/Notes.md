@@ -109,3 +109,12 @@ The available features and functions - and the way they work - should fit the si
 - Common Associations.
 - Emotional Impact.
 - From the world around you.
+
+## **12. Look at the world around you**
+
+Everything you see contains the four color variations required for good UI design.
+
+- Shadows.
+- Midtones.
+- Highlights.
+- Accents.
