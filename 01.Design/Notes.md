@@ -118,3 +118,9 @@ Everything you see contains the four color variations required for good UI desig
 - Midtones.
 - Highlights.
 - Accents.
+
+## ** Using contrast to Improve Readability, Attention and Focus.**
+
+- Text is easily readable when stark, complementary colors are used.
+- A design where text is the brightest element can reduce eye strain by focusing attention.
+- Lack of contrast between text and background strains the eyes because they don't know which color to focus on.
