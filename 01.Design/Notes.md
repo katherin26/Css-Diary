@@ -132,3 +132,7 @@ Everything you see contains the four color variations required for good UI desig
 - Design with contrast **purposefully** keeps the user's focus where it needs to be.
 - The **core content or action** should have the most contrast.
 - Secondary content and actions (and everything else) should have **lower constrast**, by degrees.
+
+1. Contrast draws the user's attention to the essential components of the interface.
+2. Contrast helps the user understand relationships between onscreen elements.
+3. Contrast communicates hierarchy and signifies importance within and across multiple sets of visual information.
