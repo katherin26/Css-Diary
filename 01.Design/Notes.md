@@ -98,3 +98,14 @@ The available features and functions - and the way they work - should fit the si
 - It should highlight and guide.
 - For extended screen use situations, use light, muted background colors.
 - Bright, saturated colors should only be used as visual accents.
+
+## **11. Color theory is useful**
+
+- But it's also a real **Pain in the ass**.
+- You're never going to have the time you need to fully understand color theory, much less apply it during a project.
+
+## **How to Choose the Right colors for your UI**
+
+- Common Associations.
+- Emotional Impact.
+- From the world around you.
