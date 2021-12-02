@@ -153,3 +153,10 @@ All of which work together to form effective, understandable visual **communicat
 - When choosing a typeface, you want one that has at least 3 styles: **regular,italic + bold**.
 - Use those styles in your design to differentiate between types of content.
 - Sometimes this removes the need for more than one font entirely - every level of information can be signified with styling.
+
+## **There are four core types of icons**
+
+- Similar : Icons are useful for simple, easily understood actions and concepts.
+- Symbolic : Icons represent an action, object, or concept at high abstraction.
+- Example : Use images of things that exemplify or are commonly associated with an action, object, or concept.
+- Arbitrary : Icons bear no resemblance to the represented concept, their meaning is learned through repeated exposure.
