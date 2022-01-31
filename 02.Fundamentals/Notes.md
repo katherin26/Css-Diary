@@ -148,3 +148,12 @@ And our file called **styles.css** would look like:
     }
 
 ```
+
+# **CSS SELECTORS**
+
+This is good introduction into what are known as CSS selectors. There are many ways to determine which HTML elements you are styling, some of which we'll mention here:
+
+1. **Element type:** This is what we've been doing so far: styling all elements of the sample type.
+2. **Id:** Another option is to give our HTML elements an id like to so: `<h1 id="first-header">Hello</h1>` and then applying styling using `#first-header{...}` using the hastag to show that we're searching by id. Importantly, no two elements can have the same id, and no element can have more than one id.
+3. **class:** This is similar to id, but a class can be shared by more than one element, and a single element can have more than one class. We add classes to an HTML element like this: `<h1 class="page-text muted">Hello!</h1>` (note that we just added two classes to the element: page-text and muted). We then style based on class using a period instead of a hastag `.muted{...}`.
+4. Now, we also have to deal with the problem of potentially conflicting CSS. What happens when a header should be red based on its class but blue on its id? CSS has a specificity order that goes:
