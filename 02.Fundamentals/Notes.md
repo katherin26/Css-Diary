@@ -156,4 +156,83 @@ This is good introduction into what are known as CSS selectors. There are many w
 1. **Element type:** This is what we've been doing so far: styling all elements of the sample type.
 2. **Id:** Another option is to give our HTML elements an id like to so: `<h1 id="first-header">Hello</h1>` and then applying styling using `#first-header{...}` using the hastag to show that we're searching by id. Importantly, no two elements can have the same id, and no element can have more than one id.
 3. **class:** This is similar to id, but a class can be shared by more than one element, and a single element can have more than one class. We add classes to an HTML element like this: `<h1 class="page-text muted">Hello!</h1>` (note that we just added two classes to the element: page-text and muted). We then style based on class using a period instead of a hastag `.muted{...}`.
+
+**SPECIFICITY**
+
 4. Now, we also have to deal with the problem of potentially conflicting CSS. What happens when a header should be red based on its class but blue on its id? CSS has a specificity order that goes:
+
+- In line styling.
+- Id.
+- Class.
+- Element Type.
+
+5. In addition to the comma for multiple selectors, there are several other ways to specify which elements you would like to style. This table from lecture provides a fewm adn we'll go through a few examples below.
+
+```
+a, b     === Multiple Element Selector
+a b      === Descendant Selector
+a > b    === Child Selector
+a + b    === Adjacent Sibling Selector
+[a-b]    === Attribute Selector
+a : b    === Pseudoclass Selector
+a :: b   === Pseudoelement Selector
+```
+
+**Descendant Selector:** Here, we use the descendant selector to only apply styling to list items found within an unordered list:
+
+```
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Using Selectors</title>
+        <style>
+            ul li {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <ol>
+            <li>foo</li>
+            <li> bar
+                <ul>
+                    <li>hello</li>
+                    <li>goodbye</li>
+                    <li>hello</li>
+                </ul>
+            </li>
+            <li>baz</li>
+        </ol>
+
+    </body>
+<html>
+
+```
+
+**Attributes as Selectors**
+
+We can also narrow down our selection based on the attributes we assign to HTML elements using brackets. For example, in the following list of links, we choose to only make the link to Amazon red:
+
+```
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Using Selectors</title>
+        <style>
+            a[href="https://www.amazon.com/"] {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <ol>
+            <li><a href="https://www.google.com/">Google</a></li>
+            <li><a href="https://www.amazon.com/">Amazon</a> </li>
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+        </ol>
+
+    </body>
+<html>
+
+
+```
