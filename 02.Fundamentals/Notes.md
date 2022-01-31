@@ -236,3 +236,38 @@ We can also narrow down our selection based on the attributes we assign to HTML 
 
 
 ```
+
+Not only can we use CSS to change what an element looks like permanently, but also what it looks like under certain conditions. For example, what if we wanted a button to change color when we hover over it? We can acheive whis using a **CSS PSEUDOCLASS**, which provides additional styling during special circumstances. We write this by adding a colon after our selector, and then adding the circumstance after that colon.
+
+**CSS PSEUDOCLASS**
+
+In the case of the button, we would add **:hover** to the button selector to specify the design only when hovering:
+
+```
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pseudoclasses</title>
+        <style>
+            button {
+                background-color: red;
+                width: 200px;
+                height: 50px;
+                font-size: 24px;
+            }
+
+            button:hover {
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <button>Button 1</button>
+        <button>Button 2</button>
+        <button>Button 3</button>
+
+    </body>
+<html>
+
+
+```
