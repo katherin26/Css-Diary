@@ -86,3 +86,26 @@ Hello, world!!
 </html>
 
 ```
+
+6. While we can style our web page as we've done above, to achieve better design, we should be able to move our styling away from the individual lines.
+
+One way of doing this is to add your styling between <style> tags in the head. Inside these tags, we write types of elements we want to be style, and the styling we wish to apply to them, For example:
+
+```
+<!DOCTYPE html>
+<head>
+<html>
+    <title>Hello!</title>
+    <style>
+        h1{
+            color:blue;
+            text-align:center;
+        }
+    </style>
+    </head>
+    <body>
+        <h1> A colorful Heading!! </h1>
+        Hello world!
+    </body>
+</html>
+```
