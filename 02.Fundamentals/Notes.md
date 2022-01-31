@@ -56,6 +56,8 @@ Hello, world!!
 3. We change style by altering the CSS properties of an element, writing something like **color:blue** or **text-align:center** .
 4. In this example below, we make a slight change to our very first file to give it a colorful heading:
 
+**CSS INLINE**
+
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -91,6 +93,8 @@ Hello, world!!
 
 One way of doing this is to add your styling between <style> tags in the head. Inside these tags, we write types of elements we want to be style, and the styling we wish to apply to them, For example:
 
+**CSS INSIDE THE STYLE TAG AND THE HEAD TAG**
+
 ```
 <!DOCTYPE html>
 <head>
@@ -109,3 +113,28 @@ One way of doing this is to add your styling between <style> tags in the head. I
     </body>
 </html>
 ```
+
+7. Another way is to include in a <link> element in your head with a link to a styles.css file that contains some styling. This means the HTML file would look like:
+
+**CSS IMPORT WITH LINK TAG**
+
+```
+<html lang="en">
+  <!DOCTYPE html>
+  <head>
+      <title>Hello!</title>
+      <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+      <h1 >A Colorful Heading!</h1>
+      Hello, world!
+  </body>
+  </html>
+```
+
+And our file called styles.css would look like:
+
+h1{
+color:blue;
+text-align:center;
+}
