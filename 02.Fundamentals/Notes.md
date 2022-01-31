@@ -138,3 +138,13 @@ h1{
 color:blue;
 text-align:center;
 }
+
+And our file called **styles.css** would look like:
+
+```
+    h1{
+        color:blue;
+        text-align: center;
+    }
+
+```
