@@ -271,3 +271,77 @@ In the case of the button, we would add **:hover** to the button selector to spe
 
 
 ```
+
+# **RESPONSIVE DESIGN**
+
+**Viewport:** The viewport is part of the screen that is actually visible to the user at any given time. By default, many webpages assume that the viewports is the same on any device, which is what leads to many sites (especially older ones) being difficult to interact with on mobile devices.
+
+One simple way to improve the appearance of a site on a mobile device is to add the following line in the head of our HTML files. This line tells the mobile device to use a viewport that is the same width as that of the device you're using rather than a much larger one.
+
+```
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+**Mediaqueries:** Media queries are ways of changing the style of a page based on how the page is being viewed.
+
+For an example of a media query, let's try to simply change the color of the screen when it shrinks down to a certain size. We signal a media query by typing @media followed by the type of query in parentheses:
+
+```
+<style>
+            @media (min-width: 600px) {
+                body {
+                    background-color: red;
+                }
+            }
+
+            @media (max-width: 599px) {
+                body {
+                    background-color: blue;
+                }
+            }
+        </style>
+
+```
+
+**FLEXBOX:** This allows us to easily have elements wrap around to the next line if they don't fit horizontally. We do this by putting all of our elements in a div that we'll call our container. We then add some styling to that div specifying that we want to use a flexbox display for the elements inside of it. We've also added some additional styling to the inner divs to better illustrate the wrapping that's ocurring here.
+
+```
+<style>
+            #container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            #container > div {
+                background-color: green;
+                font-size: 20px;
+                margin: 20px;
+                padding: 20px;
+                width: 200px;
+            }
+</style>
+
+```
+
+**Grid:** Another popular way of styling a page is using an HTML grid. In this grid, we can specify style attributes such as column widths and gaps between columns and rows, as demostrated below. Note that when we specify column widths, we say the third one is auto, meaning it should fill the rest of the page.
+
+```
+ <style>
+            .grid {
+                background-color: green;
+                display: grid;
+                padding: 20px;
+                grid-column-gap: 20px;
+                grid-row-gap: 10px;
+                grid-template-columns: 200px 200px auto;
+            }
+
+            .grid-item {
+                background-color: white;
+                font-size: 20px;
+                padding: 20px;
+                text-align: center;
+            }
+</style>
+
+```
