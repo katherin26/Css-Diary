@@ -1,0 +1,621 @@
+//--------------------------------------------------------------
+//LOGO
+.logo {
+  height: 3.25rem;
+  margin-left: 2rem;
+}
+//-------------------------------------------------------------
+//SEARCH
+
+.search {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center; //across axis o eje transversal
+  justify-content: center; //main axis
+
+  @media only screen and (max-width: $bp-smallest) {
+    // el default para order es de 0 pero cuando se coloca 1 pasa a ser el ultimo. en header se puso flex wrap.
+    order: 1;
+    flex: 0 0 100%; //ya que se pone 100% la barra a los 500px que seria el breakpoint se baja y toma el nuevo row en 100%
+    background-color: var(--color-grey-light-2);
+  }
+
+  &__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: var(--color-grey-light-2);
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 100px;
+    width: 90%;
+    transition: all 0.2s;
+    margin-right: -3.25rem; // el boton se mueve negativamente a la izquierda y cuando se haga &:focus parecer que se desplaza con el input hacia la derecha.
+
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--color-grey-light-3);
+    }
+
+    //&::-webkit-input-placeholder {
+    //font-weight: 100;
+    //color: var(--color-grey-light-4);
+    //}
+  }
+
+  //esto iguala el color del boton cuando se hace click en el buscador.
+
+  &__input:focus + &__button {
+    // + = json selector = selector adyacente para seleccionar el hermano de la entrada seleccionada .
+    background-color: var(--color-grey-light-3);
+  }
+
+  &__button {
+    border: none;
+    background-color: var(--color-grey-light-2);
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(
+        2px
+      ); //cuando el boton este activo queremos que se mueva un poco abajo.
+    }
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-grey-dark-3); //esto cambia el color del svg.
+  }
+}
+//-------------------------------------------------------------
+//USER NAVIGATION
+
+.user-nav {
+  align-self: stretch; // esto es un overwrite de align-items:center que se encuentra en .header porque no queremos que el buscador o input se modifique o se mueva verticalmente.
+
+  display: flex;
+  align-items: center;
+
+  & > * {
+    //el user-nav y todos los hijos directos de el.
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex; //esto alinea los items(svg icons) verticalmente
+    align-items: center;
+  }
+
+  & > *:hover {
+    background-color: var(--color-grey-light-2);
+  }
+
+  &__icon-box {
+    position: relative; //es relative porque es el parent de notification el cual es absolute para centrar los numeros que se encuentra con los svg
+  }
+
+  &__icon {
+    height: 2.25rem;
+    width: 2.25rem;
+    fill: var(--color-grey-dark-2);
+  }
+
+  &__notification {
+    font-size: 0.8rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: #fff;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.1rem;
+
+    display: flex; //este display flex es para centrar el texto que seria el nombre del usuario.
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__user-photo {
+    height: 3.75rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+}
+
+//-----------------------------------------------------------
+//SIDE NAVIGATION
+
+.side-nav {
+  font-size: 1.4rem;
+  list-style: none;
+  margin-top: 3.5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    margin: 0;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      //esto se aplica en el efecto de color rosado en el side bar
+      margin-bottom: 0.5rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin: 0;
+      }
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      flex: 1;
+    }
+  }
+
+  &__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--color-primary);
+    transform: scaleY(
+      0
+    ); //este trasnform hace parte de la animacion que agranda a barra rosada que se encuentra en la izquierda en el side nav
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+      // width:.4s,cubic-bezier= da el efecto de iniciar lento y despues terminar rapido, delay= .2s
+      background-color 0.1s; //esta animacion es para el background color que se encuenta en &__item:active::before
+  }
+
+  &__item:hover::before,
+  &__item--active::before {
+    transform: scaleY(1); //y de 0 pasa a 1
+    width: 100%; //iniccialmente la animacion inicia en &__item::before = width:3px; y despues con esta llega a 100%
+  }
+
+  &__item:active::before {
+    background-color: var(
+      --color-primary-light
+    ); //este efecto se ve cuando se hace click en el link y se ve un destello mas claro que el rosa de fondo.
+  }
+
+  &__link:link,
+  &__link:visited {
+    color: var(--color-grey-light-1);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 1.5rem 3rem;
+    position: relative; //cuando se coloca esta posicion especifica funciona el z index para que el link este por encima del efecto.
+    z-index: 10;
+
+    display: flex; //con este flex centramos los links que estan en el navbar.
+    align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      justify-content: center; //con este centramos los links cuando esta en 900px del media queries.
+      padding: 2rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column; // este cambia los iconos para que esten por encima de la letra.
+      padding: 1.5rem 0.5rem;
+    }
+  }
+
+  &__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 2rem;
+    fill: currentColor; //currentColor es el color del elemento actual o del parent element.
+
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+      margin-bottom: 0.7rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+
+//-----------------------------------------------------------
+//LEGAL TEXT
+
+.legal {
+  font-size: 1.2rem;
+  color: var(--color-grey-light-4);
+  text-align: center;
+  padding: 2.5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: none; //esto desaparece la fecha y copyright.
+  }
+}
+
+//-----------------------------------------------------------
+//GALLERY
+
+.gallery {
+  display: flex;
+
+  &__photo {
+    width: 100%;
+    display: block; // esto quita el espacio blanco que aparece cuando es un  inline element.
+  }
+}
+
+//-----------------------------------------------------------
+//OVERVIEW
+.overview {
+  display: flex;
+  align-items: center;
+  border-bottom: var(--line);
+
+  &__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+      padding: 1.25rem 2rem;
+    }
+  }
+
+  &__stars {
+    //flex:1;// cuando se coloca flex:1; crece y se toma todo el espacio disponible por eso queda un espacio entre las estrellas y location
+    margin-right: auto; // esto es un truco que se utiliza en flex para que las estrellas a diferencia de flex:1 no se tome todo el espacio.
+    display: flex;
+  }
+
+  &__icon-star,
+  &__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary);
+  }
+
+  &__location {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon-location {
+    margin-right: 0.5rem;
+  }
+
+  &__rating {
+    background-color: var(--color-primary);
+    margin-left: 3rem;
+    color: #fff;
+    align-self: stretch;
+    padding: 0 2.25rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 1.5rem;
+    }
+  }
+
+  &__rating-average {
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: -3px;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__rating-count {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 0.5rem;
+    }
+  }
+}
+
+//-----------------------------------------------------------
+//button inline
+.btn-inline {
+  border: none;
+  color: var(--color-primary);
+  font-size: inherit; //se coloca inherit porque se vuelve mas modular o reutilizable cuando tu quieres que la letra tenga una relacion en tamanio con el parent element.
+  border-bottom: 1px solid currentColor; //currentColor porque queremos que tenga el mismo color del texto.
+  padding-bottom: 2px;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  & span {
+    //este espan hace referencia al boton inline que se encuentra debajo de los reviews.
+    margin-left: 3px; //esta animacion mueve la flecha hacia la derecha cuando se activa el hover.
+    transition: margin-left 0.2s;
+  }
+
+  &:hover {
+    color: var(
+      --color-grey-dark-1
+    ); //gracias a que especificamos currentColor en la parte superior cuando se hace el efecto hover la linea y el texto estar gris dark.
+
+    span {
+      margin-left: 8px;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+}
+
+//este keyframe se encarga de aumentar o generar el efecto scale en location.
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+
+//-----------------------------------------------------------
+//PARAGRAPH
+
+.paragraph:not(:last-of-type) {
+  // se coloca last-of-type porque hay 2 paragraph y queremos que solo el primero tenga el margin-bottom.
+  margin-bottom: 2rem;
+}
+
+//-----------------------------------------------------------
+//LIST
+
+.list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
+
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex: 0 0 50%;
+    margin-bottom: 0.7rem;
+  }
+
+  &__item:before {
+    // se coloca aqui en pseudoelemento porque es una manera mas limpia para organizar el codigo.
+    content: ""; // content:""; siempre se requiere para que se muestre la imagen y ademas de eso se especifica el display el width and height.
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.7rem;
+
+    //older browsers
+    background-image: url(../img/chevron-thin-right.svg);
+    background-size: cover;
+
+    //new browsers = utilizan Masks -----------lo que se puede hacer es que en media queries se especifica
+    //que si el browser es antiguo utilize backgroun image y si es nuevo utilize mask.
+
+    //MASK = define el area donde podemos mirar a traves del elemento y ver que hay detras de ese elemento...
+    // basicamente es establecer el color de fondo de este elemento en un color solido y luego usar el icono como mascara.
+    //Entonces podemos mirar a traves de esa mascara y ver el color de fondo en el area donde esta el icono y todo lo demas esta cubierto por lo que sera blanco.
+
+    @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+      // si soportar mask-image esto deberia pasar y si no se aplica lo que esta arriba y dice older browsers
+      background-color: var(--color-primary);
+      -webkit-mask-image: url(../img/chevron-thin-right.svg); //mask
+      -webkit-mask-size: cover;
+
+      mask-image: url(../img/chevron-thin-right.svg); //mask
+      mask-size: cover;
+      background-image: none;
+    }
+  }
+}
+
+//-----------------------------------------------------------
+//RECOMMEND
+
+.recommend {
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-3);
+
+  display: flex;
+  align-items: center;
+
+  &__count {
+    margin-right: auto; //calcula automaticamente el margin para que empuje las imagenes al lado derecho.
+  }
+
+  &__friends {
+    display: flex; //este display flex vuelve a alinear las imagenes a 664 px
+  }
+
+  &__photo {
+    box-sizing: content-box; // queremos que el borde se agregue por encima de nuestra altura y ancho.
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 3px solid #fff;
+
+    &:not(:last-child) {
+      // este margin hace un efecto de estar una imagen sobre otra.
+      margin-right: -2rem;
+    }
+  }
+}
+
+//-----------------------------------------------------------
+//REVIEWS
+
+.review {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  &__text {
+    margin-bottom: 2rem;
+    z-index: 10; //el valor 1 se encuentra en ::before
+    position: relative; //el z index siempre funciona con el position.
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+
+  &__photo {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+  }
+
+  &__user-box {
+    margin-right: auto; //este empuja el rating a la derecha.
+  }
+
+  &__user-name {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+
+  &__user-date {
+    font-size: 1rem;
+    color: var(--color-grey-dark-3);
+  }
+
+  &__rating {
+    color: var(--color-primary);
+    font-size: 2.2rem;
+    font-weight: 300;
+  }
+
+  &::before {
+    content: "\201C"; // esto es la html entities simbol que se usa para hacer el efecto de quote.GLYPHS, El \201C es el isonumber
+    position: absolute; // el parent es review por ende colocas la posicion relativa alli.
+    top: -2.75rem;
+    left: -1rem;
+    line-height: 1;
+    font-size: 20rem;
+    color: var(--color-grey-light-2);
+    font-family: sans-serif;
+    z-index: 1; // este da la ilucion que esta por debajo del texto.
+  }
+}
+
+//-----------------------------------------------------------
+//CALL TO ACTION
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2.5rem 0;
+  }
+
+  &__book-now {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+}
+//-----------------------------------------------------------
+//CALL TO ACTION BUTTON FOOTER
+
+.btn {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+  color: #fff;
+  position: relative; //porque es el padre de invisible y este tiene absolute.
+  overflow: hidden;
+  cursor: pointer;
+
+  & > * {
+    //esto es para que se aplique en visible e invisible estos mismos parametros y asi no repetir codigo.
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s;
+  }
+
+  &__visible {
+    padding: 2rem 7.5rem;
+  }
+
+  &__invisible {
+    position: absolute; // este posicionamiento coloca el boton invisible atras .
+    padding: 2rem 0;
+    left: 0;
+    top: -100%; //esto mueve el elemento al tamanio que tenga en ese valor de porcentage.
+  }
+
+  &:hover {
+    background-image: linear-gradient(
+      to left,
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
+  }
+
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+
+  &:hover &__invisible {
+    top: 0;
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+}

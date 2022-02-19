@@ -1,0 +1,97 @@
+.container{
+    max-width:120rem;
+    margin:8rem auto;
+    background-color:var(--color-grey-light-2);
+    box-shadow:var(--shadow-dark);
+
+    min-height:50rem;
+
+    @media only screen and (max-width: $bp-largest){
+        margin:0;//se centra el elemento en el padre y se quita los 8 rem que se tiene cuando aumenta a mas de 1200
+        max-width:100%;//esto arregla lo del media queries en 1100 porque ahi un sobrante que permite ver la linea rosada.
+        width:100%;
+    }
+}
+
+.header{
+    font-size:1.4rem;// 1.4rem = 14px  cuando ponemos este font size como tenemos inherit en el input del buscardor se va a heredar de este que seria su padre.
+    height:7rem;
+    background-color:#fff;
+    border-bottom: var(--line);
+
+    display:flex;//este es el padre de todos los iconos y el nav que van en la parte superior.
+    justify-content: space-between;
+    align-items:center;
+
+    @media only screen and (max-width:$bp-smallest){// 8/16= 0.5 o 50%
+        flex-wrap:wrap;
+        align-content:space-around;
+        height:11rem;
+    }
+}
+
+.content{
+    display:flex;
+
+    @media only screen and (max-width: $bp-medium){
+        flex-direction:column; //esto va a poner el menu en el top y las columnas debajo.
+    }
+}
+
+.sidebar{
+    background-color:var(--color-grey-dark-1);
+
+    flex:0 0 18%;//1.flex-grow...flex-shrink--flex-basis (mirar flex en hotel view)
+    display:flex;//este flex separa los svg del copyright.
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.hotel-view{
+    background-color:#fff;
+    flex:1;// es para que hotel view tome todo el width restante ya que sidebar toma el 18% nada mas. 82%
+}
+
+.detail{
+    font-size:1.4rem;//1.4rem = 14px se coloca aqui el font size porque va a heredar este valor a description , user reviews y review.
+    display:flex;
+    padding:4.5rem;
+    background-color:var(--color-grey-light-1);
+    border-bottom:var(--line);
+
+    @media only screen and (max-width: $bp-medium){
+        padding:3rem;
+    }
+
+    @media only screen and (max-width: $bp-small){
+        flex-direction:column;
+    }
+}
+
+.description{
+  
+    background-color:#fff;
+    box-shadow:var(--shadow-light);
+    padding:3rem;
+    flex:0 0 60%;
+    margin-right:4.5rem;
+
+    @media only screen and (max-width: $bp-medium){
+        padding:2rem;
+        margin-right:3rem;
+    }
+
+    @media only screen and (max-width: $bp-small){
+        margin-right:0;
+        margin-bottom:3rem;
+    }
+}
+
+.user-reviews{
+    //background-color:yellowgreen;
+    flex:1;//ocupa el espacio restante ya que description se tomo el 60% .
+    display:flex;
+    flex-direction:column;// esto centra el boton debajo de las reviews.
+    align-items:center;//esto corrige la linea o el border bottom.
+
+}

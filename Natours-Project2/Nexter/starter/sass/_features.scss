@@ -1,0 +1,46 @@
+.features{
+    //background-color:$color-grey-light-2;
+    grid-column:center-start / center-end;
+
+    margin:15rem 0;
+
+    @supports(display:grid){
+        display:grid;
+        // grid-template-columns:repeat(3,1fr);// si no se especifica los rows seran implicitos lo cual seria auto.
+         grid-template-columns:repeat(auto-fit, minmax(25rem,1fr));//auto-fit es la manera que se usa para que sea responsive.
+         grid-gap:6rem;
+         align-items:start;
+    }
+ } //inicia en la columna 3 hasta la 11 del devtools y en base esta la especificacion de las columnas.
+
+ 
+ .feature{
+
+    float:left;
+    width:33.3333%;
+    margin-bottom:6rem;
+
+
+    @supports(display:grid){
+        width:auto;
+        margin-bottom:0;
+    }
+
+    display:grid;
+    grid-template-columns:min-content 1fr;
+    grid-row-gap:1.5rem;
+    grid-column-gap:2.5rem;
+     
+    &__icon{
+        fill:$color-primary;
+        width:4.5rem;
+        height:4.5rem;
+        grid-row:1/span 2;//-1 solo funciona con un explicit grid pero como tenemos en este caso implicit porque no definimos los rows se coloca span 2
+        transform:translateY(-1rem);
+    }
+
+    &__text{
+        font-size:1.7rem;
+    }
+
+ }
