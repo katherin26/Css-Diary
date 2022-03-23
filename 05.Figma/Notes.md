@@ -41,3 +41,54 @@
 
     NOTE: Allow you to create intereactive flows that explore how a user may interact with your designs.
     Prototypes are a fantastic way to : Preview **interactions** and user flows.
+
+# **TYPOGRAPHY**
+
+    SERIF : The little curls at the end of the letter forms are called serifs.
+
+    NOTE: A typefaces is the design of lettering that can include variations size, weight, slope, width, and so on.
+
+    What are the 5 types of typefaces? : There are five basic classifications of typefaces: serif, sans serif, monospaced, and
+    display.
+
+    TYPEFACES : Old Style , Transitional, Modern, Slab.
+
+    1. Sans Serif :
+
+    1.1  Grotesque (Source Sans Pro)
+    1.2  Neo-Grotesque (Helveltica)
+    1.3  Humanist (Gills Sans)
+    1.4  Geometric (Futura)
+
+    2. Display
+    3. Mono
+
+![Drag Racing](images/serif_vs_sansserif.png)
+
+# **COLOR SCHEMES**
+
+**Monochromatic**
+
+This colors will share the tense hues and tones of one primary color.
+In theory, it's the simplest of all color schemes.
+NOTE: And these are mostly used in minimal designs because one hue generally results in a less distracting layout.
+
+**Analogous**
+
+This is based off of three colors located next to each other on the color wheel.
+
+**Complimentary**
+
+A complementary color scheme is composed by using two colors opposite each other on the color wheel.
+
+**Split Complimentary**
+
+A split complementary scheme involves the use of three colors. Start with one color, find its complement and then
+use the two colors on either side of it. For Example, the complement of blue-green is red-orange and the split complement of blue-green would be red and orange.
+
+**Triadic**
+
+A triadic color scheme, a unique variant of the split complementary color scheme, with an equal distance between
+all colors.
+
+All three colors are distributed evenly around the color wheel, causing there to be no clear superiority of one color.
