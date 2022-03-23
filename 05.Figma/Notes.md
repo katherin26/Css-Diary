@@ -92,3 +92,5 @@ A triadic color scheme, a unique variant of the split complementary color scheme
 all colors.
 
 All three colors are distributed evenly around the color wheel, causing there to be no clear superiority of one color.
+
+![Drag Racing](images/color_scheme.png)
