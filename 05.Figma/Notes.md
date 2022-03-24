@@ -94,3 +94,34 @@ all colors.
 All three colors are distributed evenly around the color wheel, causing there to be no clear superiority of one color.
 
 ![Drag Racing](images/color_scheme.png)
+
+# **ACCESSUBILITY**
+
+**Color contrast**
+
+This will help those with visual impairments to see and to discern information on the
+
+recommended contrast is three to one for large text and four point five to one for small text.
+
+![Drag Racing](images/contrast_ratio.png)
+
+**Tools**:
+
+Color Safe : colorsafe.co
+Control Contrast Analyzer : Google Chrome Extension
+
+# **DESIGN EXPLORATION APPLICATION DESIGN AND DESIGN SYSTEMS**
+
+Material:
+
+1. https://ui-patterns.com/patterns/rule-builder
+2. https://developer.apple.com/design/human-interface-guidelines/
+3. https://developer.android.com/design
+4. https://atomicdesign.bradfrost.com/chapter-2/
+5. https://www.interaction-design.org/literature/topics/visual-design
+6. https://www.nngroup.com/articles/principles-visual-design/
+7. https://uxdesign.cc/the-ultimate-guide-to-proper-use-of-animation-in-ux-10bd98614fa9
+8. https://medium.com/ux-in-motion/creating-usability-with-motion-the-ux-in-motion-manifesto-a87a4584ddc
+9. https://blog.prototypr.io/the-importance-of-motion-for-ux-design-7710edcdae3a
+10. https://www.wyzowl.com/how-to-use-microinteractions/
+11. https://www.toptal.com/designers/product-design/microinteractions-better-ux
