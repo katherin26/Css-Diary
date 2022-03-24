@@ -125,3 +125,17 @@ Material:
 9. https://blog.prototypr.io/the-importance-of-motion-for-ux-design-7710edcdae3a
 10. https://www.wyzowl.com/how-to-use-microinteractions/
 11. https://www.toptal.com/designers/product-design/microinteractions-better-ux
+
+# **DESIGN PATTERNS**
+
+Design patterns are the recurring solutions that solve common design problems. These are standard reference points
+for a designer.
+
+**Categories of Design Patterns**
+
+1. Data Input
+2. Content Structuring
+3. Navigation
+4. Incentivisation
+5. Hierarchy
+6. Social Media
