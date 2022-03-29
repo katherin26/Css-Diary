@@ -139,3 +139,19 @@ for a designer.
 4. Incentivisation
 5. Hierarchy
 6. Social Media
+
+# **MOBILE DESIGN BEST PRACTICES**
+
+**Best Practices**
+
+1. Autocomplete (dinamically)
+2. Good and understandable layout
+3. A few animations (state Transition)
+4. Consistency (colors, patterns, layout and flow).
+5. Predictable ==> Use Universal Icons.
+6. The illusion of a fast product.
+7. Welcome page (engaging).
+8. login and logout with a logo engaging
+9. design for fingers.
+
+![Drag Racing](images/thumbzone.png)
