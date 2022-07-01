@@ -155,3 +155,8 @@ for a designer.
 9. design for fingers.
 
 ![Drag Racing](images/thumbzone.png)
+
+# **MOTION AND MICROINTERACTIONS**
+
+1. They can create seamless experiences.
+2. They help prevent errors :
