@@ -4442,7 +4442,7 @@ p {
   /*overflow: hidden;*/
   color: #fff;
   position: relative;
-  border: 2px solid blue;
+
   /*added display flex*/
   display: flex;
   flex-direction: row-reverse;
@@ -4457,13 +4457,12 @@ p {
   top: 38%;
   right: 15%;
   z-index: 1;
-  border: 2px solid yellow;
 }
 
 .hero-space {
   /*added .hero space and all css*/
   width: 50%;
-  border: 2px solid red;
+
   background-image: url(/images/final-frontier_large.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -4488,7 +4487,6 @@ p {
   margin: 0;
 }
 .hero-unit-moon-exploration .hero-image {
-  border: 2px solid pink;
   width: 50%;
   height: 960px;
   background-size: 1440px 960px;
@@ -4526,13 +4524,29 @@ p {
   }
 }
 @media only screen and (max-width: 735px) {
+  .hero {
+    display: flex;
+    border: 2px solid green;
+    flex-wrap: wrap-reverse;
+  }
+
+  .hero-space {
+    width: 735px;
+    height: 41vh;
+    background-image: url(/images/final-frontier_small.jpg);
+    background-repeat: no-repeat;
+    border: 2px solid red;
+  }
+
+  
+
   .hero-unit-moon-exploration .hero-image {
     width: 735px;
-    height: 490px;
-    background-size: 735px 490px;
+    height: 41vh;
+    background-size: contain;
     background-repeat: no-repeat;
     background-image: url(/images/luna_small.jpg);
-  }
+   
 }
 @media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5),
   only screen and (max-width: 735px) and (min-resolution: 1.5dppx),
