@@ -402,6 +402,7 @@ mark {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  background-color: green;
 }
 @media (min-width: 576px) {
   .container {
@@ -438,6 +439,8 @@ mark {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+  border: 2px solid red;
+  flex-direction: row;
 }
 .no-gutters {
   margin-right: 0;
@@ -523,6 +526,7 @@ mark {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+  background-color: pink;
 }
 .col {
   -ms-flex-preferred-size: 0;
@@ -4462,7 +4466,6 @@ p {
 .hero-space {
   /*added .hero space and all css*/
   width: 50%;
-
   background-image: url(/images/final-frontier_large.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -4533,7 +4536,9 @@ p {
   h3 {
     font-size: 1.5em;
   }
+
   .hero {
+    /**added display:flex and flex-wrap*/
     display: flex;
     flex-wrap: wrap-reverse;
   }
@@ -4573,6 +4578,7 @@ p {
   margin-bottom: 60px;
 }
 .timeline-item {
+  border: 2px solid green;
   float: left;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4592,6 +4598,50 @@ p {
   padding: 10%;
   margin: 15px 0;
 }
+
+/*added timeline-container */
+
+.timeline-container {
+  background-color: greenyellow;
+  display: grid;
+  grid-gap: 10px;
+}
+
+.timeline-1 {
+  background-color: lightblue;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+.timeline-2 {
+  background-color: lightcoral;
+  grid-row-start: 1;
+  grid-column-end: 2;
+}
+
+.timeline-3 {
+  background-color: pink;
+  grid-row-start: 2;
+  grid-column-end: 1;
+}
+.timeline-4 {
+  background-color: hotpink;
+  grid-row-start: 2;
+  grid-column-end: 2;
+}
+
+.timeline-5 {
+  background-color: indigo;
+  grid-row-start: 3;
+  grid-column-end: 1;
+}
+
+.timelien-6 {
+  background-color: khaki;
+  grid-row-start: 3;
+  grid-column-end: 2;
+}
+
 .timeline-item-image {
   -ms-flex-negative: 0;
   flex-shrink: 0;
