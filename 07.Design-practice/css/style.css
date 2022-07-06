@@ -3865,23 +3865,24 @@ p {
     background-image: url(/images/luna_medium_2x.jpg); } }
 
 @media only screen and (max-width: 735px) {
+  /*Modified all the media queries*/
   .hero {
     display: flex;
-    border: 2px solid green;
     flex-wrap: wrap-reverse; }
   .hero-space {
     width: 735px;
     height: 41vh;
     background-image: url(/images/final-frontier_small.jpg);
-    background-repeat: no-repeat;
-    border: 2px solid red; }
+    background-repeat: no-repeat; }
+  .hero-copy {
+    top: 60%;
+    left: 5px; }
   .hero-unit-moon-exploration .hero-image {
     width: 735px;
     height: 41vh;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(/images/luna_small.jpg);
-    top: 50px; } }
+    background-image: url(/images/luna_small.jpg); } }
 
 @media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
   .hero-unit-moon-exploration .hero-image {
