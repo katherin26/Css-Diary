@@ -3820,7 +3820,17 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  color: white;
+  background-position: center;
+  margin-bottom: 1rem; }
+
+a.hero-space:link,
+a.hero-space:visited,
+a.hero-space:hover,
+a.hero-space:active {
+  text-decoration: none;
+  color: white; }
 
 .hero-link {
   position: absolute;
@@ -3879,7 +3889,8 @@ p {
     width: 735px;
     height: 41vh;
     background-image: url(/images/final-frontier_small.jpg);
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    background-position: initial; }
   .hero-copy {
     top: 60%;
     left: 5px; }
@@ -3919,7 +3930,7 @@ p {
   background-color: #222;
   border-top: 6px solid #333;
   padding: 10%;
-  margin: 15px 0; }
+  margin: 10px; }
 
 /*added timeline-container and timeline classes 1,2,3,4,5,6 */
 .timeline-container {
@@ -3979,16 +3990,17 @@ p {
 .gallery .section-headline {
   margin-bottom: 60px; }
 
+/* Fallback code in case grid is not supported */
+/* START FAllBACK CODE*/
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr); }
+  display: flex;
+  flex-flow: row wrap; }
 
 @media only screen and (max-width: 736px) {
   .gallery-grid {
-    grid-template-columns: 1fr; } }
+    flex-flow: column nowrap; } }
 
 .gallery-photo {
-  position: relative;
   height: 33vw;
   max-height: 789px;
   overflow: hidden; }
@@ -4009,68 +4021,19 @@ p {
 
 @media only screen and (min-width: 737px) {
   .grid-third.grid-left {
-    grid-column: 1/5; }
+    width: 33.33%; }
   .grid-third.grid-right {
-    grid-column: 9/13; }
+    width: 33.33%; }
   .grid-two-third.grid-left {
-    grid-column: 1/9; }
+    width: 66.66%; }
   .grid-two-third.grid-right {
-    grid-column: 5/13; }
+    width: 66.66%; }
   .grid-half.grid-left {
-    grid-column: 1/7; }
+    width: 50%; }
   .grid-half.grid-right {
-    grid-column: 7/13; } }
+    width: 50%; } }
 
-@media only screen and (max-width: 736px) {
-  .grid-order-small-1 {
-    -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
-    order: 1; }
-  .grid-order-small-2 {
-    -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
-    order: 2; }
-  .grid-order-small-3 {
-    -webkit-box-ordinal-group: 4;
-    -ms-flex-order: 3;
-    order: 3; }
-  .grid-order-small-4 {
-    -webkit-box-ordinal-group: 5;
-    -ms-flex-order: 4;
-    order: 4; }
-  .grid-order-small-5 {
-    -webkit-box-ordinal-group: 6;
-    -ms-flex-order: 5;
-    order: 5; }
-  .grid-order-small-6 {
-    -webkit-box-ordinal-group: 7;
-    -ms-flex-order: 6;
-    order: 6; }
-  .grid-order-small-7 {
-    -webkit-box-ordinal-group: 8;
-    -ms-flex-order: 7;
-    order: 7; }
-  .grid-order-small-8 {
-    -webkit-box-ordinal-group: 9;
-    -ms-flex-order: 8;
-    order: 8; }
-  .grid-order-small-9 {
-    -webkit-box-ordinal-group: 10;
-    -ms-flex-order: 9;
-    order: 9; }
-  .grid-order-small-10 {
-    -webkit-box-ordinal-group: 11;
-    -ms-flex-order: 10;
-    order: 10; }
-  .grid-order-small-11 {
-    -webkit-box-ordinal-group: 12;
-    -ms-flex-order: 11;
-    order: 11; }
-  .grid-order-small-12 {
-    -webkit-box-ordinal-group: 13;
-    -ms-flex-order: 12;
-    order: 12; } }
-
+/* END FAllBACK CODE*/
 .image-moon-1 {
   background-repeat: no-repeat;
   background-image: url(/images/gallery/moon-1.jpg); }
