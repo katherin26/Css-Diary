@@ -3921,37 +3921,42 @@ p {
   padding: 10%;
   margin: 15px 0; }
 
-/*added timeline-container */
+/*added timeline-container and timeline classes 1,2,3,4,5,6 */
 .timeline-container {
   display: grid;
-  grid-template-columns: 1;
   grid-gap: 10px;
-  width: 50%;
   padding: 0 15px 0 15px; }
 
+/*ADDED TIMELINE ORDER*/
 .timeline-1 {
   grid-row-start: 1;
   grid-column-end: 1; }
+
+.timeline-2 {
+  grid-row-start: 1;
+  grid-column-end: 2; }
 
 .timeline-3 {
   grid-row-start: 2;
   grid-column-end: 1; }
 
-.timeline-5 {
-  grid-row-start: 3;
-  grid-column-end: 1; }
-
-.timeline-2 {
-  grid-row-start: 1;
-  grid-column-end: 1; }
-
 .timeline-4 {
   grid-row-start: 2;
+  grid-column-end: 2; }
+
+.timeline-5 {
+  grid-row-start: 3;
   grid-column-end: 1; }
 
 .timeline-6 {
   grid-row-start: 3;
   grid-column-end: 1; }
+
+/*ADDED MEDIA USING FLEX FOR MOBILE VERSION*/
+@media only screen and (max-width: 736px) {
+  .timeline-container {
+    display: flex;
+    flex-direction: column; } }
 
 .timeline-item-image {
   -ms-flex-negative: 0;
